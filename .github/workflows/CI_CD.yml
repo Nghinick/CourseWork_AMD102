@@ -37,7 +37,7 @@ jobs:
 
       # Upload artifacts
       - name: Publish Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: URLShortenerBuild
-          path: ./URLShortenMVC_Nghi/URLShortenMVC_Nghi/bin/Release
+          path: D:\GREENWICH\AMD201\CW\URLShortenMVC_Nghi/bin/Release
