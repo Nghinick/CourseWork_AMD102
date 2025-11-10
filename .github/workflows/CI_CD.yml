@@ -25,19 +25,18 @@ jobs:
 
       # Restore dependencies
       - name: Restore dependencies
-        run: dotnet restore D:\GREENWICH\AMD201\CW\URLShortenMVC_Nghi
+        run: dotnet restore ./URLShortenMVC_Nghi/URLShortenMVC.sln
 
       # Build project
       - name: Build
-        run: dotnet build --configuration Release --no-restore D:\GREENWICH\AMD201\CW\URLShortenMVC_Nghi
-
+        run: dotnet build --configuration Release --no-restore ./URLShortenMVC_Nghi/URLShortenMVC.sln
       # Run tests
       - name: Test
-        run: dotnet test --no-build --verbosity normal D:\GREENWICH\AMD201\CW\URLShortenMVC_Nghi
+        run: dotnet test --no-build --verbosity normal ./URLShortenMVC_Nghi/URLShortenMVC.sln
 
       # Upload artifacts
       - name: Publish Artifact
         uses: actions/upload-artifact@v4
         with:
           name: URLShortenerBuild
-          path: D:\GREENWICH\AMD201\CW\URLShortenMVC_Nghi/bin/Release
+          path: ./URLShortenMVC_Nghi/URLShortenMVC.sln/bin/Release
